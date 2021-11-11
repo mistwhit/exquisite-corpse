@@ -4,7 +4,7 @@ const poemRoutes = require('./poemRoutes');
 const fragmentRoutes = require('./fragmentRoutes');
 
 router.use('/users', userRoutes);
-router.use('/poems', poemRoutes);
+router.use('/poem', poemRoutes);
 router.use('/fragments', fragmentRoutes);
 
 module.exports = router;

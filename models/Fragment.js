@@ -27,13 +27,13 @@ Fragment.init(
         key: 'id',
       },
     },
-    poem_id: {
+     poem_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'poem',
         key: 'id'
       }
-    }
+    } 
   },
   {
     sequelize,
