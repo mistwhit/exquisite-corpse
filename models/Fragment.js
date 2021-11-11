@@ -11,21 +11,14 @@ Fragment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
+    text_input: {
+      type: DataTypes.STRING(50),
       allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
     },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -34,13 +27,20 @@ Fragment.init(
         key: 'id',
       },
     },
+    poem_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'poem',
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'fragment',
   }
 );
 
