@@ -17,10 +17,10 @@ Poem.belongsTo(User, {
 
 Poem.hasMany(Fragment, {
   foreignKey: 'poem_id',
-});
+})
 
 Fragment.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: 'user_id',
 });
 
 Fragment.belongsTo(Poem, {

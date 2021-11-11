@@ -11,21 +11,18 @@ Poem.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
+    title: {
+      type: DataTypes.STRING(50),
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
+    first_text: {
+      type: DataTypes.STRING(50),
+      allowNull: false,
     },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -34,13 +31,20 @@ Poem.init(
         key: 'id',
       },
     },
+    fragment_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'fragment',
+        key: 'id',
+      },
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'poem',
   }
 );
 
