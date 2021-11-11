@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Fragment } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -39,12 +39,48 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
-
   } catch (err) {
     res.status(400).json(err);
+  }
+});
+
+// get one user with fragments they've created
+router.get('/:id', async (req, res) => {
+  try {
+    const userData = await User.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [
+        {
+          model: Fragment,
+          attributes: ['id', 'text_input', 'date_created'],
+        },
+      ],
+    });
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// get all users with respective fragments they've created
+router.get('/', async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      include: [
+        {
+          model: Fragment,
+          attributes: ['id', 'text_input', 'date_created'],
+        },
+      ],
+    });
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
