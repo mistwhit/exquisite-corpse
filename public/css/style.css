@@ -1,8 +1,15 @@
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+  justify-content: center;
+}
+.footer {
+
+}
+.nav-item {
+
 }
 
-.no-button {
+.button {
   background: none;
   border: none;
   padding: 0;
@@ -12,7 +19,7 @@ header, .project:not(:last-child) {
   font-size: 100%;
 }
 
-.no-button:hover {
+.button:hover {
   color: #065b83;
   text-decoration: underline;
 }

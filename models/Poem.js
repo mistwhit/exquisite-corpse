@@ -31,13 +31,13 @@ Poem.init(
         key: 'id',
       },
     },
-    fragment_id: {
+/*     fragment_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'fragment',
         key: 'id',
       },
-    }
+    } */
   },
   {
     sequelize,
