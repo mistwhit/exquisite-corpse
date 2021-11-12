@@ -30,8 +30,26 @@ router.get('/poem', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// route to render login/signup page
+router.get('/login', (req, res) => {
+
+  // redirect user to /write page if they're already logged in
+  if (req.session.logged_in) {
+    res.redirect('/write');
+    return;
+  }
+  // if not logged in render the login page
+  res.render('login');
+});
+
+// render the /write page. will need to add the withAuth function here later so that only logged-in users can add to poem.
+router.get('/write', (req, res) => {
+  res.render('write');
 })
 
+module.exports = router;
 
 
 /* router.get('/', async (req, res) => {
@@ -111,4 +129,3 @@ router.get('/login', (req, res) => {
   res.render('login');
 }); */
 
-module.exports = router;
