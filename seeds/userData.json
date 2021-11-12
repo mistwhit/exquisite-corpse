@@ -1,0 +1,32 @@
+[
+  {
+    "username": "Edgar Allan Poe",
+    "email": "raven214@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "T.S. Eliot",
+    "email": "wastelandboy@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Emily Dickinson",
+    "email": "sleeplessinamherst@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Gwendolyn Brooks",
+    "email": "iheartchicago@email.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Walt Whitman",
+    "email": "leavesofgrass420@email.com",
+    "password": "password12345"
+  },
+  {
+    "username": "William Shakespeare",
+    "email": "realbillyshakes@email.com",
+    "password": "password12345"
+  }
+]
