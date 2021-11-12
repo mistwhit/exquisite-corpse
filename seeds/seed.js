@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { User, Fragment } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const fragmentData = require('./fragmentData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,9 +12,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
+  for (const fragment of fragmentData) {
+    await Fragment.create({
+      ...fragment,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }

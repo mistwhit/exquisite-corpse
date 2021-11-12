@@ -1,0 +1,11 @@
+<!--Page where user will view a single finished poem.-->
+
+<h1>EXQUISITE CORPSE TESTING: THIS IS WHERE ALL THE FRAGMENTS WILL APPEAR SOMEWHERE</h1>
+
+<div class="row d-flex justify-content-center">
+{{#each fragments as |fragment|}}
+<li>
+  {{fragment.text_input}} Written by {{user.username}}
+</li>
+{{/each}}
+</div>

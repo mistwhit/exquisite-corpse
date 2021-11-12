@@ -12,7 +12,7 @@ Fragment.init(
       autoIncrement: true,
     },
     text_input: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING(100),
       allowNull: false,
     },
     date_created: {
@@ -27,13 +27,13 @@ Fragment.init(
         key: 'id',
       },
     },
-     poem_id: {
+/*      poem_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'poem',
         key: 'id'
       }
-    } 
+    }  */
   },
   {
     sequelize,

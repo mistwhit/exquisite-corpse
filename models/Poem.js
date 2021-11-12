@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+/* const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Poem extends Model {}
@@ -31,13 +31,13 @@ Poem.init(
         key: 'id',
       },
     },
-/*     fragment_id: {
+    fragment_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'fragment',
         key: 'id',
       },
-    } */
+    }
   },
   {
     sequelize,
@@ -49,3 +49,4 @@ Poem.init(
 );
 
 module.exports = Poem;
+ */
