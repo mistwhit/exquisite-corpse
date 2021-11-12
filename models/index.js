@@ -7,25 +7,25 @@ User.hasMany(Fragment, {
   foreignKey: 'user_id',
 });
 
-User.hasMany(Poem, {
+/* User.hasMany(Poem, {
   foreignKey: 'user_id',
-});
+}); */
 
-Poem.belongsTo(User, {
+/* Poem.belongsTo(User, {
   foreignKey: 'user_id',
-});
+}); */
 
-Poem.hasMany(Fragment, {
+/* Poem.hasMany(Fragment, {
   foreignKey: 'poem_id',
-})
+}) */
 
 Fragment.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-Fragment.belongsTo(Poem, {
+/* Fragment.belongsTo(Poem, {
   foreignKey: 'poem_id',
-});
+}); */
 
 
 module.exports = { User, Poem, Fragment };
