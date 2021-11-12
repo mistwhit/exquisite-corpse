@@ -41,7 +41,7 @@ router.get("/:id", async (req, res) => {
     }
 });
 
-// post/create a fragment
+// create a fragment
 router.post("/", withAuth, async (req, res) => {
     try {
         const fragmentData = await Fragment.create({
@@ -53,7 +53,7 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 // delete a fragment
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
     try {
         const fragmentData = await Fragment.destroy({
             where: {

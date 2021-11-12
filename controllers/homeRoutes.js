@@ -2,7 +2,39 @@ const router = require('express').Router();
 const { Poem, User, Fragment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// route to render homepage template
 router.get('/', async (req, res) => {
+  res.render('homepage');
+});
+
+// route to view All Fragments, the One Big Poem
+router.get('/poem', async (req, res) => {
+  try {
+    const fragmentData = await Fragment.findAll({
+      // order: ['date_created', 'DESC'],
+      include: [
+        {
+          model: User,
+          attributes: ['id', 'username']
+        }
+      ]
+    }); 
+
+    // serialize fragment data for template
+    const fragments = fragmentData.map((fragment) => fragment.get({ plain: true }));
+
+    // render the 'poem' template and pass along serialized fragment data
+    res.render('poem', {
+      fragments,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+
+
+/* router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const projectData = await Project.findAll({
@@ -77,6 +109,6 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
-});
+}); */
 
 module.exports = router;
