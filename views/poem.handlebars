@@ -5,7 +5,7 @@
 <div class="row d-flex justify-content-center">
 {{#each fragments as |fragment|}}
 <li>
-    {{>fragment fragment}}
+  {{fragment.text_input}} Written by {{user.username}}
 </li>
 {{/each}}
 </div>
