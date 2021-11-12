@@ -1,14 +1,43 @@
+/*color variables*/
+:root {
+  --navbar: #c06262;
+  --accent: violet;
+  --copy: #f2e9e7;
+  
+}
+/* break line  below header */
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
-  justify-content: center;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: proxima-nova-n9, proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 900; 
+  padding: 1em;
+}
+.background-img {
+   
+    background-size: cover;
+    background-attachment: fixed;
 }
 .footer {
 
 }
+/* //////////////////////////////////nav */
 .nav-item {
+  font-family: proxima-nova-n9, proxima-nova, sans-serif;
+  /* font-style: normal;
+  font-weight: 900; */
 
 }
-
+.nav-item:hover{
+  color: var(--accent);
+    font-style: italic;
+}
+/* /////////////////////////////////////buttons */
 .button {
   background: none;
   border: none;
@@ -18,12 +47,11 @@ header, .project:not(:last-child) {
   text-decoration: none;
   font-size: 100%;
 }
-
 .button:hover {
   color: #065b83;
   text-decoration: underline;
 }
-
+/* ////////////////////////// needs new assignment */
 .dollar-amount {
   color: #056605;
   font-weight: bold;
