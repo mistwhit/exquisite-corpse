@@ -37,7 +37,7 @@ router.get('/login', (req, res) => {
 
   // redirect user to /write page if they're already logged in
   if (req.session.logged_in) {
-    res.redirect('/write');
+    res.redirect('/');
     return;
   }
   // if not logged in render the login page

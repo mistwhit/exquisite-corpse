@@ -12,6 +12,7 @@
   margin: 5px;
 
 }
+
 /* break line  below header */
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
@@ -87,11 +88,6 @@ body {
 
 
 
-
-
-
-
-
 .poem-background {
   background-color:var(--card);
   border-radius: 15%;
@@ -101,6 +97,6 @@ body {
   color:var(--copy);
 }
 
-a {
+p a {
   color:var(--copy);
 }

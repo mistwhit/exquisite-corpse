@@ -12,12 +12,15 @@
     <header class="header">E X Q U I S I T E  C O R P S E</header>
     <!-- NAV BAR -->
     <ul class="nav justify-content-end">
+      {{#if logged_in}}
         <li class="nav-item">
-          <a class="nav-link" href="SIGN-UP/LOGIN">Sign Up</a>
+          <a class="nav-link" id="logout" href="/">Log Out</a>
         </li>
+      {{else}}
         <li class="nav-item">
-            <a class="nav-link" href="SIGN-UP/LOGIN">Log In</a>
-          </li>
+          <a class="nav-link" href="/login">Log In</a>
+        </li>
+      {{/if}}
       </ul>
         
     </div>
@@ -35,7 +38,8 @@
       <footer class="footer"></footer> 
       
       
-      
+
+  <script src="/js/logout.js"></script>
       
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="./public/js/login.js"></script>
