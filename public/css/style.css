@@ -85,13 +85,6 @@ body {
   color: var(--link);
   text-decoration: underline;
 }
-/* ////////////////////////// needs new assignment */
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-}
-
 
 
 /* Tooltip container */
@@ -118,10 +111,4 @@ body {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
-}
-
-
-
-.center {
-  text-align: center;
 }
