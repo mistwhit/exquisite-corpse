@@ -1,14 +1,18 @@
 <!--Page where user will view a single finished poem.-->
 
-<h1>EXQUISITE CORPSE TESTING: THIS IS WHERE ALL THE FRAGMENTS WILL APPEAR SOMEWHERE</h1>
-
-<div class="row d-flex justify-content-center">
-{{#each fragments as |fragment|}}
-<ul class="list-group">
-<li class="list-group-item">
-  <div class="tooltip"> {{fragment.text_input}} <span class="tooltiptext"> Written by {{user.username}}</span>
-    </div>
-</li>
-</ul>
-{{/each}}
+<div class='row'>
+  <div class='col-12 d-flex justify-content-center text-center'>
+    <h1>EXQUISITE CORPSE TESTING: THIS IS WHERE ALL THE FRAGMENTS WILL APPEAR
+      SOMEWHERE</h1>
+  </div>
 </div>
+
+{{#each fragments as |fragment|}}
+  <div class='row'>
+    <div class='col-12 d-flex justify-content-center text-center'>
+      {{fragment.text_input}}
+      {{user.username}}
+      <br />
+    </div>
+  </div>
+{{/each}}
