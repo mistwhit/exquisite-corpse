@@ -2,12 +2,12 @@
 
 <h1>EXQUISITE CORPSE TESTING: THIS IS WHERE ALL THE FRAGMENTS WILL APPEAR SOMEWHERE</h1>
 
-<div class="row d-flex justify-content-center">
+
+
 {{#each fragments as |fragment|}}
-<ul>
-<li>
-  {{fragment.text_input}} by {{user.username}}
-</li>
+<div class="justify-content-center"></div>
+<ul class="list-group">
+  <li class="list-group-item">{{fragment.text_input}} by {{user.username}}</li>
 </ul>
-{{/each}}
 </div>
+{{/each}}
