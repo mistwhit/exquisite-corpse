@@ -1,41 +1,89 @@
 /*color variables*/
 :root {
-  --navbar: #c06262;
-  --accent: violet;
-  --copy: #f2e9e7;
-  
+  --back: #292231;
+  --accent: rgb(59, 62, 89);
+  --copy: #2b2927;
+  --card: #f2e3d0;
+  --link: #542265;
+  --lightcopy: #ffffff;
+}
+/* ///////////////////////////////////////// */
+* {
+  margin: 5px;
+  display: border=box;
+  justify-content: space-between;
+  align-items: center;
+  font-family: proxima-nova-n9, proxima-nova, sans-serif;
+
 }
 /* break line  below header */
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
+a {
+  text-decoration: none;
+}
+p.important {
+   border-style: solid; border-width: 2px; border-color: var(--link);
+   border-radius: 5%;
+   }
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: proxima-nova-n9, proxima-nova, sans-serif;
+  
   font-style: normal;
   font-weight: 900; 
-  padding: 1em;
+  padding: 1.5em;
+  color: var(--lightcopy);
 }
 .background-img {
-   
-    background-size: cover;
-    background-attachment: fixed;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .footer {
 
 }
+
 /* //////////////////////////////////nav */
-.nav-item {
+#nav-item {
   font-family: proxima-nova-n9, proxima-nova, sans-serif;
+  color: var(--link);
+  /* text-decoration: none; */
   /* font-style: normal;
   font-weight: 900; */
 
 }
-.nav-item:hover{
+/* ----------------------- */
+.nav-link {
+  color: var(--card);
+  font-size: ;
+}
+.nav-link:hover{
   color: var(--accent);
-    font-style: italic;
+  font-style: italic;
+}
+/* ------------------------ */
+.card {
+  color: var(--card);
+  border-radius: 2.5%;
+  border: none;
+  background-color: var(--card);
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 50%;
+  box-shadow: 10px 10px 5px rgb(0, 0, 0);
+  /* vertical-align: baseline; */
+}
+.post {
+
+}
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 625px;
+  width: 100%;
+  /* background-image: ; */
+  background-color: var(--back);
+  padding: 20px;
 }
 /* /////////////////////////////////////buttons */
 .button {
@@ -43,12 +91,12 @@ header, .project:not(:last-child) {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color: var(--link);
   text-decoration: none;
   font-size: 100%;
 }
 .button:hover {
-  color: #065b83;
+  color: var(--link);
   text-decoration: underline;
 }
 /* ////////////////////////// needs new assignment */
@@ -56,4 +104,31 @@ header, .project:not(:last-child) {
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* positioning for tooltip text */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

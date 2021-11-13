@@ -4,8 +4,11 @@
 
 <div class="row d-flex justify-content-center">
 {{#each fragments as |fragment|}}
-<li>
-  {{fragment.text_input}} Written by {{user.username}}
+<ul class="list-group">
+<li class="list-group-item">
+  <div class="tooltip"> {{fragment.text_input}} <span class="tooltiptext"> Written by {{user.username}}</span>
+    </div>
 </li>
+</ul>
 {{/each}}
 </div>
