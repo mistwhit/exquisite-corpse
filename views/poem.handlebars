@@ -4,8 +4,10 @@
 
 <div class="row d-flex justify-content-center">
 {{#each fragments as |fragment|}}
+<ul>
 <li>
-  {{fragment.text_input}} Written by {{user.username}}
+  {{fragment.text_input}} by {{user.username}}
 </li>
+</ul>
 {{/each}}
 </div>

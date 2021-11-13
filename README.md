@@ -9,3 +9,9 @@ This is a collaborative writing app inspired by the surrealist parlor game, in w
  - MySQL
 
 ##
+
+
+
+
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip
