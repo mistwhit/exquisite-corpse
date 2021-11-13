@@ -3,11 +3,10 @@
 <h1>EXQUISITE CORPSE TESTING: THIS IS WHERE ALL THE FRAGMENTS WILL APPEAR SOMEWHERE</h1>
 
 
-
 {{#each fragments as |fragment|}}
-<div class="justify-content-center"></div>
-<ul class="list-group">
-  <li class="list-group-item">{{fragment.text_input}} by {{user.username}}</li>
-</ul>
+<div class="row">
+    <div class="col-12 d-flex justify-content-center text-center">
+        {{fragment.text_input}} by {{user.username}} <br>
+    </div>
 </div>
 {{/each}}
