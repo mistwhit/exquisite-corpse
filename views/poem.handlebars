@@ -1,18 +1,39 @@
 <!--Page where user will view a single finished poem.-->
 
 <div class='row'>
-  <div class='col-12 d-flex justify-content-center text-center'>
-    <h1>EXQUISITE CORPSE TESTING: THIS IS WHERE ALL THE FRAGMENTS WILL APPEAR
+  <div class='poem-background col-12 d-flex justify-content-center text-center'>
+    <h1 class="poem-copy">EXQUISITE CORPSE TESTING: THIS IS WHERE ALL THE FRAGMENTS WILL APPEAR
       SOMEWHERE</h1>
   </div>
 </div>
 
 {{#each fragments as |fragment|}}
   <div class='row'>
-    <div class='col-12 d-flex justify-content-center text-center'>
-      {{fragment.text_input}}
-      {{user.username}}
-      <br />
+    <div class='poem-background col-12 d-flex justify-content-center text-center'>
+  <p><a href="#" data-toggle="tooltip" title="Written by {{user.username}} on {{fragment.date_created}}">{{fragment.text_input}}</a>
+      </p>
     </div>
   </div>
 {{/each}}
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+{{!-- <div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{{get_emoji}}}</p>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>
+    <span for="img" aria-label="money">💲</span>
+    <span class="dollar-amount">{{format_amount needed_funding}}</span>
+    needed
+  </p>
+  <p>
+    <button class="btn btn-primary">Fund this Project!</button>
+  </p>
+</div>
+ --}}
