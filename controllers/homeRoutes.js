@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 // route to render homepage template with User data so we can determine whether user is logged_in
 router.get('/', async (req, res) => {
   try {
-
+    
     const fragmentData = await Fragment.findAll({
       include: [
         {
@@ -50,6 +50,7 @@ router.get('/poem', async (req, res) => {
     // render the 'poem' template and pass along serialized fragment data
     res.render('poem', {
       fragments,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -67,9 +68,26 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-// render the /write page. will need to add the withAuth function here later so that only logged-in users can add to poem.
-router.get('/write', withAuth, (req, res) => {
-  res.render('write');
+// render the /write page. withAuth function ensures only logged in users allowed.
+router.get('/write', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Fragment }],
+    });
+
+
+    console.log("_______________________________________________________________________________________________________________" + "Logged in as" + req.session.user_id + req.session.logged_in);
+    const user = userData.get({ plain: true });
+
+    res.render('write', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
