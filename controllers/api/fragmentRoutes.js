@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Fragment, User, Poem } = require('../../models');
+const { Fragment, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all fragments
@@ -10,9 +10,6 @@ router.get("/", async (req, res) => {
                 {
                     model: User,
                 },
-/*                 {
-                    model: Poem,
-                }, */
             ],
         }); res.status(200).json(fragmentData)
     } catch (err) {
@@ -31,9 +28,6 @@ router.get("/:id", async (req, res) => {
                 {
                     model: User,
                 },
-/*                 {
-                    model: Poem,
-                }, */
             ],
         }); res.status(200).json(fragmentData)
     } catch (err) {
@@ -65,8 +59,6 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-
 
 
 module.exports = router;
