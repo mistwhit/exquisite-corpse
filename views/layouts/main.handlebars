@@ -11,24 +11,24 @@
 <body>
     <header class="header">E X Q U I S I T E  C O R P S E</header>
     <!-- NAV BAR -->
+    <div> 
+
     <ul class="nav justify-content-end">
       {{#if logged_in}}
         <li class="nav-item">
           <a class="nav-link" id="logout" href="/">Log Out</a>
         </li>
-      {{else}}
+          {{else}}
         <li class="nav-item">
           <a class="nav-link" href="/login">Log In</a>
         </li>
-      {{/if}}
+              {{/if}}
       </ul>
-        
     </div>
     <!-- MAIN  -->
- 
-
     <div class="main-container">
-               {{{body}}}
+
+               {{{ body }}}
         <!-- Content here this is the homepage-->
         <!-- new poem -->
         <!-- single poem -->
@@ -46,38 +46,3 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
- {{!--  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}} --}}
