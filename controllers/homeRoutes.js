@@ -5,7 +5,6 @@ const withAuth = require('../utils/auth');
 // route to render homepage template with User data so we can determine whether user is logged_in
 router.get('/', async (req, res) => {
   try {
-    
     const fragmentData = await Fragment.findAll({
       include: [
         {
@@ -14,11 +13,18 @@ router.get('/', async (req, res) => {
         },
       ],
     });
-    
-    // seralize user data so template can use it
-    const fragments = fragmentData.map((fragment) => fragment.get({ plain: true }));
 
-    console.log("_______________________________________________________________________________________________________________" + "Logged in as" + req.session.user_id + req.session.logged_in);
+    // seralize user data so template can use it
+    const fragments = fragmentData.map((fragment) =>
+      fragment.get({ plain: true })
+    );
+
+    console.log(
+      '_______________________________________________________________________________________________________________' +
+        'Logged in as' +
+        req.session.user_id +
+        req.session.logged_in
+    );
     // render the homepage and pass along whether user is logged_in
     res.render('homepage', {
       fragments,
@@ -77,13 +83,42 @@ router.get('/write', withAuth, async (req, res) => {
       include: [{ model: Fragment }],
     });
 
-
-    console.log("_______________________________________________________________________________________________________________" + "Logged in as" + req.session.user_id + req.session.logged_in);
+    console.log(
+      '_______________________________________________________________________________________________________________' +
+        'Logged in as' +
+        req.session.user_id +
+        req.session.logged_in
+    );
     const user = userData.get({ plain: true });
 
     res.render('write', {
       ...user,
-      logged_in: true
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// route to view individual Users and their Fragments
+router.get('/poets/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id, {
+      include: [
+        {
+          model: Fragment,
+          attributes: ['text_input'],
+        },
+      ],
+    });
+
+    // serialize data for template
+    const user = userData.get({ plain: true });
+
+    // render the 'poets' template and pass along serialized  data
+    res.render('poets', {
+      ...user,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
