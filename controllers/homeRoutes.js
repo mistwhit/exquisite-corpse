@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     // seralize user data so template can use it
     const fragments = fragmentData.map((fragment) => fragment.get({ plain: true }));
 
-    console.log("_______________________________________________________________________________________________________________" + "Logged in as" + req.session.user_name + req.session.logged_in);
+    console.log("_______________________________________________________________________________________________________________" + "Logged in as" + req.session.user_id + req.session.logged_in);
     // render the homepage and pass along whether user is logged_in
     res.render('homepage', {
       fragments,
