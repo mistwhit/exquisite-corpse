@@ -39,7 +39,8 @@ router.get("/:id", async (req, res) => {
 router.post("/", withAuth, async (req, res) => {
     try {
         const fragmentData = await Fragment.create({
-        text_input: req.body.text_input,
+        ...req.body,
+        user_id: req.session.user_id,
         }); res.status(200).json(fragmentData)
     } catch (err) {
         res.status(500).json(err);

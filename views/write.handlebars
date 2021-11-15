@@ -1,18 +1,15 @@
 <!--Page where user will update/add to created poems.-->
 <h1>(Title of Page Goes Here)</h1>
 
-<p class="poem-background poem-copy">Welcome, {{name}}</p>
+<p class='poem-background poem-copy'>Welcome, {{name}}</p>
 
 <h2>(Instructions for User Goes Here)</h2>
 
-<textarea>(Example of Poetry Submission Goes Here)</textarea>
-
-<button>Submit</button>
-
-
-
-
+<form id='write-form'>
+  <textarea id='fragment'>(Example of Poetry Submission Goes
+    Here)</textarea>
+  <button type='submit' id='submit-poem'>Submit</button>
+</form>
 
 
-
-
+    <script src="/public/js/submitFragment.js"></script>
