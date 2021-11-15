@@ -13,14 +13,10 @@
     >
       <p><a
           href='/poets/{{user.id}}'
-          data-toggle='tooltip'
-          title='Written by {{user.name}} on {{fragment.date_created}}'
+          title='Written by {{user.name}} on {{fragment.date_created}}
+          '
         >{{fragment.text_input}}</a>
       </p>
     </div>
   </div>
 {{/each}}
-
-<script>
-  $(document).ready(function(){ $('[data-toggle="tooltip"]').tooltip(); });
-</script>
