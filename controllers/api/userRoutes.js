@@ -40,10 +40,9 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
-
   } catch (err) {
     res.status(400).json(err);
   }
@@ -72,17 +71,16 @@ router.get('/:id', async (req, res) => {
 // delete one user with fragments they've created
 router.delete('/:id', async (req, res) => {
   try {
-      const userData = await User.destroy({
-          where: {
-              id: req.params.id,
-          },
-      });
-      res.status(200).json(userData);
+    const userData = await User.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(userData);
   } catch (err) {
-      res.status(500).json(err);
+    res.status(500).json(err);
   }
 });
-
 
 // get all users with respective fragments they've created
 router.get('/', async (req, res) => {

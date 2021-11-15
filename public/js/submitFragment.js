@@ -1,5 +1,5 @@
 const submitFragment = async (event) => {
-  console.log("Somebody clicked the submit poem button")
+  console.log('Somebody clicked the submit poem button');
 
   event.preventDefault();
 
