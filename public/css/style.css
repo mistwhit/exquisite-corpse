@@ -104,3 +104,14 @@ p a {
 .login-copy {
   color:var(--lightcopy)
 }
+
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  background-color: var(--accent);
+  color: var(--lightcopy);
+  font-size: 80%;
+}

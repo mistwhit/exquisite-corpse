@@ -6,17 +6,15 @@
   </div>
 </div>
 
-{{#each fragments as |fragment|}}
+
   <div class='row'>
+{{#each fragments as |fragment|}}
     <div
-      class='poem-background col-12 d-flex justify-content-center text-center'
-    >
-      <p><a
+      class='row poem-background col-12 d-flex justify-content-center text-center'
+    ><p><a
           href='/poets/{{user.id}}'
-          title='Written by {{user.name}} on {{fragment.date_created}}
-          '
-        >{{fragment.text_input}}</a>
-      </p>
-    </div>
-  </div>
-{{/each}}
+        ><span data-descr="Written by {{user.name}}">{{fragment.text_input}}</span></a>
+      </p><br>
+      {{/each}}
+        </div>
+</div>
