@@ -105,6 +105,7 @@ p a {
   color:var(--lightcopy)
 }
 
+/*This is styling for the tooltip*/
 span[data-descr]:hover::after,
 span[data-descr]:focus::after {
   content: attr(data-descr);

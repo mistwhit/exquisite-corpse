@@ -1,3 +1,5 @@
+// form handler for form on /write page. grabs text input and passes into database at /api/fragments endpoint, creating a Fragment instance.
+
 const submitFragment = async (event) => {
   console.log('Somebody clicked the submit poem button');
 
