@@ -7,36 +7,16 @@
   --link: #542265;
   --lightcopy: #ffffff;
 }
-<<<<<<< HEAD
-/* ///////////////////////////////////////// */
-* {
-  margin: 5px;
-  display: border=box;
-  justify-content: space-between;
-  align-items: center;
-  font-family: proxima-nova-n9, proxima-nova, sans-serif;
-=======
 /* ///////////////////////////////////////// */∏
 * {
   margin: 5px;
->>>>>>> 69b1e5925aa45a67e8689a20cedc12d30a997af5
 
 }
+
 /* break line  below header */
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
-<<<<<<< HEAD
-a {
-  text-decoration: none;
-}
-p.important {
-   border-style: solid; border-width: 2px; border-color: var(--link);
-   border-radius: 5%;
-   }
-=======
-
->>>>>>> 69b1e5925aa45a67e8689a20cedc12d30a997af5
 .header {
   
   font-style: normal;
@@ -56,11 +36,7 @@ p.important {
 #nav-item {
   font-family: proxima-nova-n9, proxima-nova, sans-serif;
   color: var(--link);
-<<<<<<< HEAD
-  /* text-decoration: none; */
-=======
   text-decoration: none;
->>>>>>> 69b1e5925aa45a67e8689a20cedc12d30a997af5
   /* font-style: normal;
   font-weight: 900; */
 
@@ -68,10 +44,6 @@ p.important {
 /* ----------------------- */
 .nav-link {
   color: var(--card);
-<<<<<<< HEAD
-  font-size: ;
-=======
->>>>>>> 69b1e5925aa45a67e8689a20cedc12d30a997af5
 }
 .nav-link:hover{
   color: var(--accent);
@@ -80,20 +52,6 @@ p.important {
 /* ------------------------ */
 .card {
   color: var(--card);
-<<<<<<< HEAD
-  border-radius: 2.5%;
-  border: none;
-  background-color: var(--card);
-  font: inherit;
-  font-size: 100%;
-  margin: 0;
-  padding: 50%;
-  box-shadow: 10px 10px 5px rgb(0, 0, 0);
-  /* vertical-align: baseline; */
-}
-.post {
-
-=======
   border-radius: 25%;
   border: none;
   font: inherit;
@@ -101,17 +59,12 @@ p.important {
   margin: 0;
   padding: 100%;
   vertical-align: baseline;
->>>>>>> 69b1e5925aa45a67e8689a20cedc12d30a997af5
 }
 body {
   display: flex;
   flex-direction: column;
   max-width: 625px;
   width: 100%;
-<<<<<<< HEAD
-  /* background-image: ; */
-=======
->>>>>>> 69b1e5925aa45a67e8689a20cedc12d30a997af5
   background-color: var(--back);
   padding: 20px;
 }
@@ -131,55 +84,35 @@ body {
 }
 
 
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+
+
+
+
+.poem-background {
+  background-color:var(--card);
+  border-radius: 15%;
 }
 
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
+.poem-copy {
+  color:var(--copy);
+}
+
+p a {
+  color:var(--copy);
+}
+
+.login-copy {
+  color:var(--lightcopy)
+}
+
+/*This is styling for the tooltip*/
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+  content: attr(data-descr);
   position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* positioning for tooltip text */
-  position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  background-color: var(--accent);
+  color: var(--lightcopy);
+  font-size: 80%;
 }
