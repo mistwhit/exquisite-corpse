@@ -1,32 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>welcome to | E X Q U I S I T E C O R P S E</title>
-</head>
-<header class="header">E X Q U I S I T E <em class ="em"> C O R P S E</em>
-    <img class="background-welcome-img" src="/src/raven.png" width="50%"></header>
-<!-- <div class="background-welcome-img"> -->
-<body class="background-img">
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link
+      rel='stylesheet'
+      href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
+      integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm'
+      crossorigin='anonymous'
+    />
+    <link rel='stylesheet' href='/css/style.css' />
+    <title>welcome to | E X Q U I S I T E C O R P S E</title>
+  </head>
+  <header class='header'>E X Q U I S I T E
+    <em class='em'> C O R P S E</em>
+    <img
+      class='background-welcome-img'
+      src='/src/raven.png'
+      width='50%'
+    /></header>
+  <!-- <div class="background-welcome-img"> -->
+  <body class='background-img'>
     <!-- nav -->
-    <ul class="nav justify-content-end">
+    <ul class='nav justify-content-end'>
       {{#if logged_in}}
-        <li id="nav-item"><a class="nav-link" href='/login'>Tell Us Your Pen Name</a></li>
+        <li id='nav-item'><a class='nav-link' href='/' id='logout'>Close the
+            Book</a></li>
       {{else}}
-      <li id="nav-item"><a class="nav-link" href='/logout'>Close the Book</a></li>
+        <li id='nav-item'><a class='nav-link' href='/login'>Tell Us Your Pen
+            Name</a></li>
       {{/if}}
-        <li id="nav-item"><a class="nav-link" href='/write'>Add to the Poem</a></li>
-        <li id="nav-item"><a class="nav-link" href='/poem'>Read the Poem So Far</a></li>
-      </ul>
-    
+      <li id='nav-item'><a class='nav-link' href='/write'>Add to the Poem</a></li>
+      <li id='nav-item'><a class='nav-link' href='/poem'>Read the Poem So Far</a></li>
+    </ul>
+
     <div class='card'>
 
-        {{{body}}}
+      {{{body}}}
 
     </div>
 
@@ -38,5 +48,5 @@
     <script
       src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'
     ></script>
-</body>
+  </body>
 </html>
