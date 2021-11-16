@@ -157,10 +157,6 @@ body {
     }
   
 
-.poem-background {
-  background-color:var(--card);
-  border-radius: 15%;
-}
 
 .poem-copy {
   color:var(--copy);
