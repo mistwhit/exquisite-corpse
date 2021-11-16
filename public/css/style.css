@@ -137,9 +137,12 @@ body {
 /* ----------------------- */
 .button {
   color: var(--link);
-  background-color:#32699b;
+  background-color:#434292;
   color:var(--lightcopy);
     border-bottom: 1px solid #1A4164;
+    border: none;
+    border-radius: 2px;
+    
 }
     .button:hover{
       color: var(--accent);
@@ -180,4 +183,10 @@ span[data-descr]:focus::after {
   background-color: var(--accent);
   color: var(--lightcopy);
   font-size: 80%;
+}
+
+.btn-btn-primary{
+  color: var(--link);
+  background-color:#32699b;
+  color:var(--lightcopy);
 }
