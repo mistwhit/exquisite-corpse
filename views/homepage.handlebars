@@ -2,33 +2,21 @@
 Maybe we also display in-progress poems here that users can select?
 Click the title and get taken to edit-poem?-->
 
-<h1>EXQUISITE CORPSE TESTING!!!!!!!!!! WELCOME TO THE HOMEPAGE Y'ALL.</h1>
-
-
-
-
-{{!-- <!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
+<div class='row'>
+  <div class='poem-background col-12 d-flex justify-content-center text-center'>
+    <h3 class='poem-copy'>Hello, Poet-in-Waiting</h3>
+    <p class='poem-copy'>Exquisite corpse—<i>cadavre exquis</i>
+      if you're nasty—is a parlor game developed by French surrealists in the
+      early 20th century. The idea is that a group of people play together to
+      build a collage of images or, as is the case here, words: a poem with many
+      poets. Each person takes turns writing a line, building on the lines that
+      came before.</p>
+    <p class='poem-copy'>Now, welcome to the world's biggest, never-ending game
+      of exquisite corpse.</p>
+    <ul>
+      <li><a href='/login'>Tell Us Your Pen Name</a></li>
+      <li><a href='/write'>Add to the Poem</a></li>
+      <li><a href='/poem'>Read the Poem So Far</a></li>
+    </ul>
   </div>
 </div>
-{{/each}}
- --}}

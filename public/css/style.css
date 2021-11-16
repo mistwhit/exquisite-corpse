@@ -1,59 +1,187 @@
 /*color variables*/
 :root {
-  --navbar: #c06262;
-  --accent: violet;
-  --copy: #f2e9e7;
-  
+  --back: #242744;
+  --accent: rgb(37, 60, 89);
+  --copy: #202044;
+  --card: #e2e1eb;
+  --link: #60759d;
+  --lightcopy: #ffffff;
 }
+/* ///////////////////////////////////////// */∏
+* {
+  margin: 5px;
+  display: block;
+  justify-content: center;
+  font-family: proxima-nova-n9, proxima-nova, sans-serif;
+}
+
 /* break line  below header */
 header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid var(--link); */
+  position: relative;
+ 
 }
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: proxima-nova-n9, proxima-nova, sans-serif;
+  font-size: 3.25em;
   font-style: normal;
   font-weight: 900; 
-  padding: 1em;
+  padding: 1.5em;
+  color: var(--lightcopy);
 }
-.background-img {
-   
-    background-size: cover;
-    background-attachment: fixed;
+.em {
+  color: var(--link);
+}
+.hello {
+  align-items: center;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 900; 
+  padding: 1.5em;
+  color: var(--lightcopy);
 }
 .footer {
 
 }
+
 /* //////////////////////////////////nav */
-.nav-item {
+#nav-item {
   font-family: proxima-nova-n9, proxima-nova, sans-serif;
+  color: var(--link);
+  text-decoration: none;
+  
   /* font-style: normal;
   font-weight: 900; */
 
 }
-.nav-item:hover{
+/* ----------------------- */
+.nav-link {
+  color: var(--lightcopy);
+  background-color:#434292;
+    color:var(--lightcopy);
+    border-bottom: 1px linear-gradient(#242744, #000000);
+    border-radius: 2px;
+    margin: 3px;
+}
+    .nav-link:hover{
+      color: var(--accent);
+      font-style: italic;
+      background-color:#60679d ;
+      top:-2px;
+      border-bottom: 4px solid #c3d6e6;
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    }
+   .nav-link:active{
+      top:0px;
+      border: 1px solid #93a8ba;
+      background-color:#b0b5d8;
+      box-shadow: inset 0px 0px 4px rgba(0,0,0,0.25);
+    }
+  
+
+/* .nav-link:hover{
   color: var(--accent);
-    font-style: italic;
+  font-style: italic;
+} */
+/* ---------------------------------------------- */
+.card {
+  color: var(--copy);
+  /* border-radius: 25px; */
+  border: none;
+  font: inherit;
+  font-size: 100%;
+  margin: 4%;
+  padding: 1%;
+  vertical-align: center;
+  background-color: var(--card);
+  opacity: .85;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 625px;
+  width: 100%;
+  max-width: 100%;
+  /* background-image: url('./src/raven.png'); */
+  background-image: linear-gradient(#242744, #000000);
+  /* background-color: var(--back); */
+  padding: 20px;
+  
+}
+.background-img {
+  /* background-image: url('raven.png'); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* position: inherit; */
+  position: absolute;
+  /* background-image: url('./src/raven.png'); */
+  z-index: -2;
+  max-width: 100%;
+  /* z-index: -2; */
+  
+}
+.background-welcome-img {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* position: inherit; */
+  position: absolute;
+  z-index: -2;
+  max-width: 100%;
+  margin: 0;
+  /* z-index: -2; */
+  
 }
 /* /////////////////////////////////////buttons */
+/* ----------------------- */
 .button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+  color: var(--link);
+  background-color:#32699b;
+  color:var(--lightcopy);
+    border-bottom: 1px solid #1A4164;
 }
-.button:hover {
-  color: #065b83;
-  text-decoration: underline;
+    .button:hover{
+      color: var(--accent);
+      font-style: italic;
+      background-color:#60809d ;
+      top:-2px;
+      border-bottom: 4px solid #1A4164;
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    }
+   .button:active{
+    top:0px;
+    border: 1px solid #1A4164;
+    background-color:#255988;
+    box-shadow: inset 0px 0px 4px rgba(0,0,0,0.25);
+    }
+  
+
+.poem-background {
+  background-color:var(--card);
+  border-radius: 15%;
 }
-/* ////////////////////////// needs new assignment */
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+
+.poem-copy {
+  color:var(--copy);
+}
+
+p, a {
+  color:var(--copy);
+}
+
+.login-copy {
+  color:var(--lightcopy)
+}
+
+/*This is styling for the tooltip*/
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  background-color: var(--accent);
+  color: var(--lightcopy);
+  font-size: 80%;
 }
