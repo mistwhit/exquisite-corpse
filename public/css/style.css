@@ -78,10 +78,6 @@ header, .project:not(:last-child) {
     }
   
 
-/* .nav-link:hover{
-  color: var(--accent);
-  font-style: italic;
-} */
 /* ---------------------------------------------- */
 .card {
   color: var(--copy);
@@ -157,6 +153,10 @@ body {
     }
   
 
+.poem-background {
+  background-color:var(--card);
+  border-radius: 15%;
+}
 
 .poem-copy {
   color:var(--copy);
