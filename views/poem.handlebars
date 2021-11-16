@@ -1,17 +1,12 @@
 <!--Page where user will view a single finished poem.-->
 
-<div class='row'>
-  <div class='poem-background col-12 d-flex justify-content-center text-center'>
-    <h1 class='poem-copy'>The Poem</h1>
-  </div>
-</div>
-
 
   <div class='row'>
 {{#each fragments as |fragment|}}
     <div
       class='row poem-background col-12 d-flex justify-content-center text-center'
-    ><p><a
+    >
+    <p><a
           href='/poets/{{user.id}}'
         ><span data-descr="Written by {{user.name}}">{{fragment.text_input}}</span></a>
       </p><br>
