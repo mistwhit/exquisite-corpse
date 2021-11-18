@@ -6,21 +6,119 @@
   --card: #e2e1eb;
   --link: #60759d;
   --lightcopy: #ffffff;
-}
-/* ///////////////////////////////////////// */∏
-* {
-  margin: 5px;
-  display: block;
-  justify-content: center;
-  font-family: proxima-nova-n9, proxima-nova, sans-serif;
+  --xx: #000000;
+  --dur: 0.3s;
 }
 
-/* break line  below header */
-header, .project:not(:last-child) {
-  /* border-bottom: 1px solid var(--link); */
-  position: relative;
- 
+/* ///////////////////////////////////////// */
+* {
+  flex-wrap: wrap;
+  align-content: center;
+  font-family: proxima-nova-n9, proxima-nova, sans-serif;
 }
+/* /////////////////////////////////////////////// light & dark theme */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+    body, input {
+      color: var(--copy);
+      /* font: 1em/1.5 sans-serif; */
+    }
+    body, .toggle:before, .toggle:after {
+      background: hsl(0,0%,90%);
+    }
+    /* toggle switch */
+    body, .toggle {
+      position: relative;
+    }
+    body {
+      /* display: flex; */
+      /* justify-content: center;
+      align-items: center; */
+      /* height: 100vh; */
+    }
+    .curtain, .sr, .toggle:before, .toggle:after {
+      position: absolute;
+    }
+    .curtain, .toggle:before, .toggle:after {
+      transition: transform var(--dur);
+    }
+    .curtain, .toggle:before, .toggle:checked:after  {
+      transition-timing-function: ease-out;
+    }
+    .curtain, .sr {
+      top: 0;
+      left: 0;
+    }
+    /* the curtain creates an inverted layer for light over dark mode */ 
+    .curtain {
+      background: rgb(209, 205, 225);
+      /* control the layers with the z-index */
+      z-index: -1;
+      opacity:80%;
+      mix-blend-mode: difference;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+    }
+    .sr, .toggle {
+      overflow: hidden;
+    }
+    .sr {
+      clip: rect(1px,1px,1px,1px);
+      color: transparent;
+      width: 1px;
+      height: 1px;
+    }
+    .toggle {
+      background: currentColor;
+      border-radius: 0.75em;
+      cursor: pointer;
+      width: 3em;
+      height: 1.5em;
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .toggle:before, .toggle:after {
+      border-radius: 50%;
+      content: "";
+      display: block;
+      top: 0.25em;
+      left: 0.25em;
+      width: 1em;
+      height: 1em;
+    }
+    .toggle:before, .toggle:checked:after {
+      transition-delay: 0s;
+    }
+    .toggle:checked:before, .toggle:after {
+      transition-delay: calc(var(--dur) * 0.75);
+      transition-timing-function: cubic-bezier(0.3,1.6,0.5,0.7);
+    }
+    .toggle:before {
+      transform: translateX(-1.5em);
+    }
+    .toggle:checked:before {
+      transform: translateX(1.5em);
+    }
+    .toggle:checked:after {
+      transform: translateX(3em);
+    }
+    .toggle:checked ~ .curtain {
+      transform: scaleX(1);
+    }
+    .toggle:focus {
+      outline: transparent;
+    }
+  /* ///////////////////////////////////////////////////// */
+
 .header {
   font-size: 3.25em;
   font-style: normal;
@@ -30,6 +128,7 @@ header, .project:not(:last-child) {
 }
 .em {
   color: var(--link);
+  font-size: 1.25em;
 }
 .hello {
   align-items: center;
@@ -40,19 +139,26 @@ header, .project:not(:last-child) {
   color: var(--lightcopy);
 }
 .footer {
-
+ color: var(--lightcopy);
+ padding-top: 40%;
+}
+/* ///////////////////////////////////////////////// forms */
+/* to get the form inputs to align to the start w/o affecting the button */
+.form-input {
+  padding: 2px;
+  margin: 3px;
+  display: grid;
+  flex-direction: row;
+  justify-content: start;
 }
 
-/* //////////////////////////////////nav */
+
+/* ////////////////////////////////////////////////nav */
 #nav-item {
   font-family: proxima-nova-n9, proxima-nova, sans-serif;
   color: var(--link);
   text-decoration: none;
-  
-  /* font-style: normal;
-  font-weight: 900; */
-
-}
+ }
 /* ----------------------- */
 .nav-link {
   color: var(--lightcopy);
@@ -69,6 +175,7 @@ header, .project:not(:last-child) {
       top:-2px;
       border-bottom: 4px solid #c3d6e6;
       box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+      
     }
    .nav-link:active{
       top:0px;
@@ -78,15 +185,14 @@ header, .project:not(:last-child) {
     }
   
 
-/* ---------------------------------------------- */
+/* ---------------------------------------------- MAIN */
 .card {
   color: var(--copy);
-  /* border-radius: 25px; */
   border: none;
   font: inherit;
   font-size: 100%;
-  margin: 4%;
-  padding: 1%;
+  margin: 5%;
+  padding: 5%;
   vertical-align: center;
   background-color: var(--card);
   opacity: .85;
@@ -95,64 +201,52 @@ header, .project:not(:last-child) {
 body {
   display: flex;
   flex-direction: column;
-  max-width: 625px;
+  /* max-width: 625px; */
   width: 100%;
+  height: 100%;
   max-width: 100%;
-  /* background-image: url('./src/raven.png'); */
   background-image: linear-gradient(#242744, #000000);
-  /* background-color: var(--back); */
   padding: 20px;
-  
+ 
 }
-.background-img {
-  /* background-image: url('raven.png'); */
+
+/*/////////////////////////////////////////// backgrounds  */
+.background-img, .background-welcome-img {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  /* position: inherit; */
-  position: absolute;
-  /* background-image: url('./src/raven.png'); */
-  z-index: -2;
-  max-width: 100%;
-  /* z-index: -2; */
-  
-}
-.background-welcome-img {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  /* position: inherit; */
   position: absolute;
   z-index: -2;
-  max-width: 100%;
-  margin: 0;
-  /* z-index: -2; */
-  
+  max-width: 100%;  
 }
+
 /* /////////////////////////////////////buttons */
 /* ----------------------- */
 .button {
-  color: var(--link);
-  background-color:#32699b;
-  color:var(--lightcopy);
-    border-bottom: 1px solid #1A4164;
+  color: var(--lightcopy);
+  background-color:#434292;
+    color:var(--lightcopy);
+    border-bottom: 1px linear-gradient(#242744, #000000);
+    border: none;
+    border-radius: 2px;
+    padding: 2%;
 }
     .button:hover{
       color: var(--accent);
       font-style: italic;
-      background-color:#60809d ;
+      background-color:#60679d ;
       top:-2px;
-      border-bottom: 4px solid #1A4164;
+      border-bottom: 4px solid #c3d6e6;
       box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
     }
    .button:active{
     top:0px;
-    border: 1px solid #1A4164;
-    background-color:#255988;
+    border: 1px solid #93a8ba;
+    background-color:#b0b5d8;
     box-shadow: inset 0px 0px 4px rgba(0,0,0,0.25);
     }
   
-
+/* //////////////////////////////////////////////poem inputs */
 .poem-background {
   background-color:var(--card);
   border-radius: 15%;
