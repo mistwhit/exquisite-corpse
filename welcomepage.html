@@ -1,42 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./public/css/style.css">
   <title>welcome to | E X Q U I S I T E C O R P S E</title>
 </head>
-<header class="header">E X Q U I S I T E <em class ="em"> C O R P S E</em>
-    <img class="background-welcome-img" src="./public/src/raven.png" width="50%"></header>
+
 <!-- <div class="background-welcome-img"> -->
+
 <body class="background-img">
+  <!-- theme switch -->
+  <div class="container">
+
+    <form>
+      <input id="dark-mode" class="toggle" type="checkbox" name="Dark mode" role="switch" value="on">
+      <label for="dark-mode" class="sr"></label>
+      <div class="curtain"></div>
+    </form>
+
+
+    <!-- /////////////////////////////////////// new ^^^^^^ -->
+   
+  <header class="header">E X Q U I S I T E <em class="em"> C O R P S E</em></header>
+  <img class="background-img" src="./public/src/raven.png" width="55%">
+
+  
     <!-- nav -->
-    <ul class="nav justify-content-end">
-      {{#if logged_in}}
-        <li id="nav-item"><a class="nav-link" href='/login'>Tell Us Your Pen Name</a></li>
-      {{else}}
+    <ul class="nav justify-content-center">
+      <!-- {{#if logged_in}} -->
+      <li id="nav-item"><a class="nav-link" href='/login'>Tell Us Your Pen Name</a></li>
+      <!-- {{else}} -->
       <li id="nav-item"><a class="nav-link" href='/login'>Close the Book</a></li>
-      {{/if}}
-        <li id="nav-item"><a class="nav-link" href='/write'>Add to the Poem</a></li>
-        <li id="nav-item"><a class="nav-link" href='/poem'>Read the Poem So Far</a></li>
-      </ul>
-    
+      <!-- {{/if}} -->
+      <li id="nav-item"><a class="nav-link" href='/write'>Add to the Poem</a></li>
+
+      <li id="nav-item"><a class="nav-link" href='/poem'>Read the Poem So Far</a></li>
+    </ul>
+
     <div class='card'>
 
-        {{{body}}}
+      <div class='row'>
+        <div class='col-md-6'>
+          <h2 class='login-copy'>Log In</h2>
+
+          <form class='form login-form'>
+            <div class='form-group'>
+              <label for='email-login' class='login-copy'>Email:</label>
+              <input class='form-input' type='text' id='email-login' />
+            </div>
+            <div class='form-group'>
+              <label for='password-login' class='login-copy'>Password:</label>
+              <input class='form-input' type='password' id='password-login' />
+            </div>
+            <div class='form-group'>
+              <button class='button' type='submit'>Log In</button>
+            </div>
+          </form>
+        </div>
+        <div class='col-md-6'>
+          <h2 class='login-copy'>Or Sign Up</h2>
+
+          <form class='form signup-form'>
+            <div class='form-group'>
+              <label for='name-signup' class='login-copy'>name:</label>
+              <input class='form-input' type='text' id='name-signup' />
+            </div>
+            <div class='form-group'>
+              <label for='email-signup' class='login-copy'>email:</label>
+              <input class='form-input' type='text' id='email-signup' />
+            </div>
+            <div class='form-group'>
+              <label for='password-signup' class='login-copy'>password:</label>
+              <input class='form-input' type='password' id='password-signup' />
+            </div>
+            <div class='form-group'>
+              <button class='button' type='submit'>Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
 
     </div>
+  </div>
 
-    <script src='/js/logout.js'></script>
-    <script
-      src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'
-    ></script>
-    <script src='./public/js/login.js'></script>
-    <script
-      src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'
-    ></script>
+  <script src='/js/logout.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src='./public/js/login.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
 </body>
+
 </html>
