@@ -37,13 +37,15 @@ https://exquis-game.herokuapp.com/
     - ```npm start```
 - Run the App
     - Visit http://localhost:3001/ in your browser
-    - OR link the app to Heroku
+    - OR use Heroku to deploy
 
 ## References
-https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip
+[W3 Schools - Tooltip CSS](https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip)
 
-https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and-pure-javascript-zocada-dd0059d72fa2
+[Medium - Dark & Light Theme](https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and-pure-javascript-zocada-dd0059d72fa2)
 
-https://video.search.yahoo.com/yhs/search?fr=yhs-iba-syn_launcham&ei=UTF-8&hsimp=yhs-syn[…]ght+and+dark+theme+using+css&type=symn_9123_CHW_US_tid107
+[Yahoo Video - Light & Dark Theme](https://video.search.yahoo.com/yhs/search?fr=yhs-iba-syn_launcham&ei=UTF-8&hsimp=yhs-syn[…]ght+and+dark+theme+using+css&type=symn_9123_CHW_US_tid107)
 
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_dark_mode
+[W3 Schools - Toggle Dark Mode](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_dark_mode)
+
+[Medium - Flexbox Sticky Footer](https://medium.com/vehikl-news/sticky-footer-with-flexbox-980fff216da3)
