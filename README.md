@@ -17,7 +17,7 @@ This is a collaborative writing app inspired by the surrealist parlor game, in w
 [![Home Page](./seeds/src/homepage.png "Home")](https://exquis-game.herokuapp.com/)
 [![Log In Page](./seeds/src/login.png "Log In")](https://exquis-game.herokuapp.com/login)
 [![Writing Page](./seeds/src/write.png "Write")](https://exquis-game.herokuapp.com/write)
-[![Poem Page](poem.png "Poem")](https://exquis-game.herokuapp.com/poem)
+[![Poem Page](./seeds/src/poem.png "Poem")](https://exquis-game.herokuapp.com/poem)
 
 ## Link
 https://exquis-game.herokuapp.com/
