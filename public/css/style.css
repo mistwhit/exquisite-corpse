@@ -1,3 +1,4 @@
+/*color variables*/
 :root {
   --back: #242744;
   --accent: rgb(37, 60, 89);
@@ -139,8 +140,7 @@
 }
 .footer {
  color: var(--lightcopy);
- padding-top: 10%;
-}
+  flex: 1;}
 /* ///////////////////////////////////////////////// forms */
 /* to get the form inputs to align to the start w/o affecting the button */
 .form-input {
