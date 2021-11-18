@@ -140,7 +140,7 @@
 }
 .footer {
  color: var(--lightcopy);
- padding-top: 40%;
+ padding-top: 10%;
 }
 /* ///////////////////////////////////////////////// forms */
 /* to get the form inputs to align to the start w/o affecting the button */
