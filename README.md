@@ -13,11 +13,21 @@ AS A [possibly frustrated] writer, I WANT TO work on poems with other writers SO
 This is a collaborative writing app inspired by the surrealist parlor game, in which a group of people take turns crafing a poem. Users will sign in and either create a new poem or add to an existing one. 
 ```
 
+## Usage
+[Visit the deployed app.](https://exquis-game.herokuapp.com/) 
+
+Login with the following credentials:
+
+- Email: raven214@hotmail.com
+- Password: password12345
+
+On the "Add to the Poem" page, write a line of poetry and click submit. You can view the complete poem with your addition(s) on the "Read the Poem So Far" page.
+
 ## Screenshots
-[![Home Page](./public/src/homepage.png "Home")](https://exquis-game.herokuapp.com/)
-[![Log In Page](./public/src/login.png "Log In")](https://exquis-game.herokuapp.com/login)
-[![Writing Page](./public/src/write.png "Write")](https://exquis-game.herokuapp.com/write)
-[![Poem Page](./public/src/poem.png "Poem")](https://exquis-game.herokuapp.com/poem)
+[![Home Page](/public/src/homepage.png "Home")](https://exquis-game.herokuapp.com/)
+[![Log In Page](/public/src/login.png "Log In")](https://exquis-game.herokuapp.com/login)
+[![Writing Page](/public/src/write.png "Write")](https://exquis-game.herokuapp.com/write)
+[![Poem Page](/public/src/poem.png "Poem")](https://exquis-game.herokuapp.com/poem)
 
 ## Link
 https://exquis-game.herokuapp.com/
