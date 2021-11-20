@@ -140,7 +140,8 @@
 }
 .footer {
  color: var(--lightcopy);
-  flex: 1;}
+  flex: 1;
+}
 /* ///////////////////////////////////////////////// forms */
 /* to get the form inputs to align to the start w/o affecting the button */
 .form-input {
