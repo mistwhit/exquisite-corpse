@@ -5,7 +5,9 @@
 ---
 
 ## Description
-Exquisite corpse—*cadavre exquis* if you're nasty—is a parlor game developed by French surrealists in the early 20th century. The idea is that a group of people play together to build a collage of images or, as is the case here, words: a poem with many poets. Each person takes turns writing a line, building on the lines that came before. Welcome to the world's biggest, never-ending game of exquisite corpse.
+Exquisite corpse—*cadavre exquis* if you're nasty—is a parlor game developed by French surrealists in the early 20th century. The idea is that a group of people play together to build a collage of images or, as is the case here, words: a poem with many poets. Each person takes turns writing a line, building on the lines that came before. 
+
+Welcome to the world's biggest, most online game of exquisite corpse. Users will create accounts and contribute to one evolving poem, logging their own lines of poetry and re-contextualizing their work as they go.
 
 ## User Story
 ```
