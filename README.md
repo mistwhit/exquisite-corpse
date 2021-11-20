@@ -27,7 +27,6 @@ On the "Add to the Poem" page, write a line of poetry and click submit. You can 
 [![Home Page](/public/src/homepage.png "Home")](https://exquis-game.herokuapp.com/)
 [![Log In Page](/public/src/login.png "Log In")](https://exquis-game.herokuapp.com/login)
 [![Writing Page](/public/src/write.png "Write")](https://exquis-game.herokuapp.com/write)
-[![Poem Page](/public/src/poem.png "Poem")](https://exquis-game.herokuapp.com/poem)
 
 ## Link
 https://exquis-game.herokuapp.com/
