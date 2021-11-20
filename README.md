@@ -22,6 +22,11 @@ This is a collaborative writing app inspired by the surrealist parlor game, in w
 ## Link
 https://exquis-game.herokuapp.com/
 
+## Try It Out
+Want to give it a try? Use these credentials:
+- Email: raven214@hotmail.com     
+- Password: password12345
+
 ## Installation  
 - Clone the Repository
     - ```git clone https://github.com/mistwhit/exquisite-corpse.git``` 
