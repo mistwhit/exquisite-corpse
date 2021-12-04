@@ -16,7 +16,7 @@ This is a collaborative writing app inspired by the surrealist parlor game, in w
 ```
 
 ## Usage
-[Visit the deployed app.](https://exquis-game.herokuapp.com/) 
+[Visit the deployed app.](https://exqu-game.herokuapp.com/) 
 
 Login with the following credentials:
 
